@@ -1,18 +1,14 @@
 import express from 'express'
+import {  formularioLogin, registroUser } from '../controllers/userController.js';
 
 const router = express.Router();
 
-//  router.get('/login', (req,res)=>{
-//     res.render('auth/login');
-//  })
 
-router.route('/login')
+router.get('/login', formularioLogin)
 
-    .get(function(req, res){
-        res.render('auth/login', {
-            autenticado: true
-        })
-    })
+router.get('/registro', registroUser)
+
+    
 
 
 
